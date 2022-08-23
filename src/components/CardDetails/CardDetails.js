@@ -20,7 +20,7 @@ const theme = createTheme({
 });
 const CardDetails = ({ image, title, author, rating, price, people }) => {
   return (
-    <Card>
+    <Card sx={{ mr: 1, mt: 3, borderRadius: 0 }}>
       <CardMedia
         component="img"
         height="140"

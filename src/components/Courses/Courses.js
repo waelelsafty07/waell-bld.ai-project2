@@ -109,7 +109,14 @@ const Courses = () => {
   const CourseData = courses.length ? (
     courses.map((course) => {
       return (
-        <Grid key={course.id} item md={3} className={styles.GridWidth}>
+        <Grid
+          key={course.id}
+          item
+          sm={12}
+          md={4}
+          lg={2.4}
+          className={styles.GridWidth}
+        >
           <CardDetails
             image={course.image}
             title={course.title}
@@ -127,10 +134,22 @@ const Courses = () => {
 
   return (
     <>
-      <Container>
-        <Grid container spacing={2}>
-          {CourseData}
-        </Grid>
+      <Container sx={{ border: 1, p: 5 }}>
+        <h2>Expand your career opportunities with Python</h2>
+        <div>
+          <p className={styles.paragraph}>
+            Take one of Udemy’s range of Python courses and learn how to code
+            using this incredibly useful language. Its simple syntax and
+            readability makes Python perfect for Flask, Django, data science,
+            and machine learning. You’ll learn how to build everything from
+            games to sites to apps. Choose from a range of courses that will
+            appeal to both beginners and advanced developers alike.
+          </p>
+        </div>
+        <button className={styles.btnCourses} sx={{ p: 10 }}>
+          Explore Python
+        </button>
+        <Grid container>{CourseData}</Grid>
       </Container>
     </>
   );
