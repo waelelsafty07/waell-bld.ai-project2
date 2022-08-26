@@ -3,7 +3,12 @@ import Container from "@mui/material/Container";
 import CourseDetails from "../CourseDetails/CourseDetails";
 import Grid from "@mui/material/Grid";
 import styles from "./Courses.module.css";
+import CoursesHeading from "./CoursesHeading";
+
 const Courses = () => {
+  const title = "Expand your career opportunities with Python";
+  const body =
+    "Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful language. Its simple syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. You’ll learn how to build everything from games to sites to apps. Choose from a range of courses that will appeal to both beginners and advanced developers alike.";
   const courses = [
     {
       id: 1,
@@ -135,20 +140,7 @@ const Courses = () => {
   return (
     <>
       <Container sx={{ border: 1, p: 5 }}>
-        <h2>Expand your career opportunities with Python</h2>
-        <div>
-          <p className={styles.paragraph}>
-            Take one of Udemy’s range of Python courses and learn how to code
-            using this incredibly useful language. Its simple syntax and
-            readability makes Python perfect for Flask, Django, data science,
-            and machine learning. You’ll learn how to build everything from
-            games to sites to apps. Choose from a range of courses that will
-            appeal to both beginners and advanced developers alike.
-          </p>
-        </div>
-        <button className={styles.btnCourses} sx={{ p: 10 }}>
-          Explore Python
-        </button>
+        <CoursesHeading title={title} body={body} btn="Python"></CoursesHeading>
         <Grid container>{CourseData}</Grid>
       </Container>
     </>
