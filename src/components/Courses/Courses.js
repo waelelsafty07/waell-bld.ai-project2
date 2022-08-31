@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "@mui/material/Container";
-import CourseDetails from "../CourseDetails/CourseDetails";
+import CourseCard from "../CourseCard/CourseCard";
 import Grid from "@mui/material/Grid";
 import styles from "./Courses.module.css";
 import CoursesHeading from "./CoursesHeading";
@@ -122,7 +122,7 @@ const Courses = () => {
           lg={2.4}
           className={styles.GridWidth}
         >
-          <CourseDetails
+          <CourseCard
             image={course.image}
             title={course.title}
             author={course.author}

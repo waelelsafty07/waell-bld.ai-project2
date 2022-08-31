@@ -6,7 +6,7 @@ import Rating from "@mui/material/Rating";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Link from "@mui/material/Link";
-import styles from "./CourseDetails.module.css";
+import styles from "./CourseCard.module.css";
 
 import { createTheme } from "@mui/material/styles";
 
@@ -18,7 +18,7 @@ const theme = createTheme({
     },
   },
 });
-const CourseDetails = ({ image, title, author, rating, price, people }) => {
+const CourseCard = ({ image, title, author, rating, price, people }) => {
   return (
     <Card sx={{ mr: 1, mt: 3, borderRadius: 0 }}>
       <CardMedia
@@ -78,4 +78,4 @@ const CourseDetails = ({ image, title, author, rating, price, people }) => {
   );
 };
 
-export default CourseDetails;
+export default CourseCard;
