@@ -1,0 +1,25 @@
+.GridWidth {
+  width: 100%;
+}
+h2 {
+  font-size: 1.7rem;
+}
+.paragraph {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  margin-bottom: 1.6rem;
+  max-width: 50rem;
+}
+
+.btnCourses {
+  border: 1px solid #000;
+  padding: 1rem;
+  font-weight: bold;
+}
+.btnCourses:hover {
+  background-color: rgb(210, 209, 209);
+}
