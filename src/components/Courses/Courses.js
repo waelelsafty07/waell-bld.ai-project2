@@ -139,9 +139,11 @@ const Courses = () => {
 
   return (
     <>
-      <Container sx={{ border: 1, p: 5 }}>
-        <CoursesHeading title={title} body={body} btn="Python"></CoursesHeading>
-        <Grid container>{CourseData}</Grid>
+      <Container>
+        <div className={styles.Container}>
+          <CoursesHeading title={title} body={body} btn="Python" />
+          <Grid container>{CourseData}</Grid>
+        </div>
       </Container>
     </>
   );

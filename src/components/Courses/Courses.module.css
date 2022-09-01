@@ -1,8 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .GridWidth {
   width: 100%;
 }
 h2 {
   font-size: 1.7rem;
+}
+.Container {
+  margin-top: 1rem;
+  border: 1px solid #000;
+  padding: 1rem;
 }
 .paragraph {
   display: -webkit-box !important;
