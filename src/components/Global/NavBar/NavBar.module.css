@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
+a {
+  color: #3d3c0a;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+a:hover {
+  color: #5624d0;
+}
+.header {
+  box-shadow: 0px 2px 5px #aaaaaa;
+}
+.topHeader {
+  display: flex;
+  position: relative;
+  background-color: #eceb98;
+  color: #3d3c0a;
+}
+.bar {
+  flex-basis: 100%;
+  padding: 1rem 0 1rem 2.4rem;
+}
+.text {
+  text-align: center;
+}
+.unTitle {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+}
+.title {
+  font-weight: 700;
+}
+.presentation {
+  display: block;
+}
+
+.btnClose {
+  color: #3d3c0a;
+  margin: 1rem 1.2rem 0 0;
+  background: 0 0;
+  height: 0;
+  min-width: auto;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/*
+      Header Nav
+  */
+
+.rowWrap {
+  flex-wrap: wrap;
+}
+.nav {
+  padding: 0.5rem;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  display: flex;
+  margin: 0.2rem 0 0 0;
+}
+a {
+  color: #3d3c0a;
+}
+a {
+  margin: 0 0.4rem;
+}
+
+.imgLogo {
+  width: 91px;
+}
+
+.searchBar {
+  flex-grow: 1;
+  height: 3.4rem;
+  border: 1px solid #1c1d1f;
+  border-radius: 9999px;
+  background-color: #f7f9fa;
+  position: relative;
+}
+.searchForm {
+  flex-direction: row-reverse;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.searchLabel {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 3.2rem;
+  padding-bottom: 0.8rem;
+  min-height: 4rem;
+  color: #5c5b5b;
+  font-family: sans-serif;
+  font-size: 0.7rem;
+  position: absolute !important;
+  overflow: hidden;
+}
+
+.searchInput {
+  background-color: transparent;
+  flex: 1;
+  border: 0;
+  height: 3.4rem;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+}
+.searchInput:focus {
+  outline: none;
+}
+
+.btn {
+  position: relative;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  vertical-align: bottom;
+  color: #5c5b5b;
+  background-color: transparent;
+  min-width: auto;
+  padding: 0 0.8rem;
+  width: 2.8rem;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.btn:hover {
+  color: #000;
+}
+a,
+button {
+  align-items: center;
+  display: inline-flex;
+  height: 2.5rem;
+  min-width: auto;
+}
+
+.login {
+  color: #000;
+  border: 1px solid #1c1d1f;
+  font-weight: 900;
+  position: relative;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+.login:hover,
+.global-icon:hover {
+  background-color: #eee;
+}
+.signup:hover {
+  background-color: #000;
+}
+.signup {
+  background-color: rgba(0, 0, 0, 0.875);
+  color: #fff;
+  border: 1px solid #1c1d1f;
+  font-weight: 900;
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 0 0.5rem;
+}
+
+.globalIcon {
+  color: #000;
+  background: none;
+  border: 1px solid #1c1d1f;
+  font-weight: 900;
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 0 0.5rem;
+}
+
+@media (max-width: 1081px) {
+  .business {
+    display: none;
+  }
+}
+@media (max-width: 920px) {
+  .teach {
+    display: none;
+  }
+}
+
+.btnSearchBar,
+.btnShopping {
+  background-color: transparent;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  justify-content: center;
+  display: none;
+  margin: 0.3rem;
+}
+.btnShopping {
+  display: none;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .list {
+    display: none;
+  }
+  .category,
+  .searchBar {
+    display: none;
+  }
+  .logo {
+    margin: auto;
+  }
+  .tab {
+    display: none;
+  }
+  .btnShopping {
+    display: block;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .btnMenu {
+    display: none;
+  }
+}

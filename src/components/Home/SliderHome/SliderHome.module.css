@@ -1,0 +1,58 @@
+.rowSearch {
+  display: flex;
+
+  margin: 0.2rem 0 0 0;
+}
+
+.rowWrap {
+  flex-wrap: wrap;
+}
+.gBackground {
+  background-color: #f8f8fb;
+}
+.innerBox {
+  background-color: #fff;
+  padding: 2rem;
+}
+.innerImage {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.imgSlider {
+  width: 50%;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .rowReverse {
+    flex-direction: column-reverse;
+  }
+  .innerBox {
+    max-width: none;
+    box-shadow: none;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .colMd6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .innerBox {
+    max-width: 22rem;
+
+    box-shadow: 1px 2px #aaaa;
+    margin: 3rem 1rem 4rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .innerBox {
+    margin: 3rem 6rem 9rem;
+  }
+}
