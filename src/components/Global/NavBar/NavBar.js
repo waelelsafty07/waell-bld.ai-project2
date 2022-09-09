@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./NavBar.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LanguageIcon from "@mui/icons-material/Language";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 const NavBar = () => {
+  const navigate = useNavigate();
+
+  const titleSearch = useRef();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const onClickHandler = (event) => {
+    event.preventDefault();
+    setSearchParams({ search: titleSearch.current.value });
+    navigate({
+      pathname: "/",
+      search: `?search=${titleSearch.current.value}`,
+    });
+  };
+
   return (
     <>
       <header className={styles.header}>
@@ -31,13 +46,13 @@ const NavBar = () => {
               <MenuIcon />
             </span>
           </div>
-          <a href="/index.html" className={styles.logo}>
+          <Link to="/" className={styles.logo}>
             <img
               className={styles.imgLogo}
-              src="./logo-udemy.svg"
+              src="http://localhost:3000/logo-udemy.svg"
               alt="udemy logo"
             />
-          </a>
+          </Link>
           <a href="/" className={styles.category}>
             {" "}
             Categories{" "}
@@ -49,10 +64,10 @@ const NavBar = () => {
                 className={styles.searchInput}
                 placeholder="Search for anything"
                 type="text"
-                name=""
-                id=""
+                ref={titleSearch}
               />
-              <button className={styles.btn}>
+
+              <button className={styles.btn} onClick={onClickHandler}>
                 <SearchIcon />
               </button>
             </form>

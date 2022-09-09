@@ -1,20 +1,14 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-ul {
+.list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: inline-flex;
 }
-a {
-  color: #3d3c0a;
+.nav a {
   text-decoration: none;
   font-family: sans-serif;
 }
-a:hover {
+.nav a:hover {
   color: #5624d0;
 }
 .header {
@@ -77,7 +71,7 @@ a:hover {
 a {
   color: #3d3c0a;
 }
-a {
+.nav ul a {
   margin: 0 0.4rem;
 }
 
@@ -143,7 +137,7 @@ a {
 .btn:hover {
   color: #000;
 }
-a,
+.nav a,
 button {
   align-items: center;
   display: inline-flex;
@@ -190,12 +184,12 @@ button {
 
 @media (max-width: 1081px) {
   .business {
-    display: none;
+    display: none !important;
   }
 }
 @media (max-width: 920px) {
   .teach {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -213,6 +207,9 @@ button {
   display: none;
   font-size: 1.2rem;
 }
+.category {
+  margin: 0 0.5rem;
+}
 
 @media only screen and (max-width: 768px) {
   .list {
@@ -220,7 +217,7 @@ button {
   }
   .category,
   .searchBar {
-    display: none;
+    display: none !important;
   }
   .logo {
     margin: auto;

@@ -1,0 +1,52 @@
+.Component {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.Component .Text {
+  flex: 1;
+  min-width: 1px;
+}
+
+.Component ul > li > div {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  letter-spacing: normal;
+  white-space: normal;
+}
+.Component ul > li > div > div {
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.Description {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-height: 10.1rem;
+  -webkit-mask-image: linear-gradient(#fff, #fff, rgba(255, 255, 255, 0));
+  -moz-mask-image: linear-gradient(#fff, #fff, rgba(255, 255, 255, 0));
+  -o-mask-image: linear-gradient(#fff, #fff, rgba(255, 255, 255, 0));
+  mask-image: linear-gradient(#fff, #fff, rgba(255, 255, 255, 0));
+}
+.IsActive {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-height: none;
+}
+.showMore {
+  color: #5624d0;
+  background-color: transparent;
+  border: none;
+  min-width: auto;
+  padding: 0;
+  font-weight: bold;
+}
+.showMore:hover {
+  color: #391790;
+}

@@ -1,0 +1,32 @@
+.IconButton {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  font-size: 0.5rem;
+}
+.IconButton button {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0 0 0 0rem;
+}
+.IconButton button:hover {
+  background: none;
+}
+
+.Report {
+  margin: 1rem;
+}
+
+.Report .Link {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.Report:hover .Link {
+  color: #5624d0;
+}
+.IconReview svg {
+  margin: 0;
+}

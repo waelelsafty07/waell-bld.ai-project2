@@ -1,12 +1,12 @@
 import React from "react";
-import Courses from "../Courses/Courses";
+import Tabs from "./Tabs/Tabs";
 import SliderHome from "../Home/SliderHome/SliderHome";
 
 const Home = () => {
   return (
     <>
       <SliderHome />
-      <Courses />;
+      <Tabs></Tabs>
     </>
   );
 };
