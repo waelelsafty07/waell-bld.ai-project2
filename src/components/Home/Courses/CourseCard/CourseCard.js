@@ -33,16 +33,69 @@ const CourseCard = ({
   return (
     <>
       <div>
-        <Link
-          to={`/courses/${id}`}
-          aria-describedby={idPopper}
-          className={styles.Block}
+        <Card
+          onMouseEnter={onHoverHandler}
+          onMouseLeave={onLeaveHandler}
+          style={{ border: "none" }}
+          sx={{ mr: 0, mt: 3, borderRadius: "none", boxShadow: "none" }}
         >
-          <Card
-            onMouseEnter={onHoverHandler}
-            onMouseLeave={onLeaveHandler}
-            style={{ border: "none" }}
-            sx={{ mr: 0, mt: 3, borderRadius: "none", boxShadow: "none" }}
+          <Popper
+            id={idPopper}
+            className={styles.Popover}
+            open={open}
+            onClose={onLeaveHandler}
+            placement="left-start"
+            anchorEl={isShown}
+          >
+            <div className={styles.PopoverContainer}>
+              <h2>{title}</h2>
+              <div className={styles.LastUpdate}>
+                updated <span>September 2019</span>
+              </div>
+              <div className={styles.Total}>21 total hours</div>
+              <p>
+                21 total hours21 total hours21 total hours21 total hours21 total
+                hours
+              </p>
+              <ul className={styles.BoxList}>
+                {syllabus?.map((item, index) => {
+                  if (index > 2) return null;
+                  return (
+                    <li key={index}>
+                      <div className="List-Block">
+                        <CheckIcon fontSize="small" />
+                        {item}
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+              <div style={{ display: "flex" }}>
+                <div className={styles.buyBox}>
+                  <div style={{ width: "14rem" }}>
+                    <button
+                      className={`${styles.sideBarButton} ${styles.btnAddToCart}`}
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+                <div className={styles.love}>
+                  <div>
+                    <button
+                      className={`${styles.sideBarButton} ${styles.btnBuyNow}`}
+                    >
+                      <FavoriteBorderIcon />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Popper>
+          <Link
+            to={`/courses/${id}`}
+            aria-describedby={idPopper}
+            className={styles.Block}
           >
             <CardMedia
               component="img"
@@ -81,62 +134,8 @@ const CourseCard = ({
                 <span>E£{price}</span>
               </div>
             </CardContent>
-          </Card>
-        </Link>
-
-        <Popper
-          id={idPopper}
-          className={styles.Popover}
-          open={open}
-          onClose={onLeaveHandler}
-          placement="left-start"
-          anchorEl={isShown}
-        >
-          <div className={styles.PopoverContainer}>
-            <h2>{title}</h2>
-            <div className={styles.LastUpdate}>
-              updated <span>September 2019</span>
-            </div>
-            <div className={styles.Total}>21 total hours</div>
-            <p>
-              21 total hours21 total hours21 total hours21 total hours21 total
-              hours
-            </p>
-            <ul className={styles.BoxList}>
-              {syllabus?.map((item, index) => {
-                if (index > 2) return null;
-                return (
-                  <li key={index}>
-                    <div className="List-Block">
-                      <CheckIcon fontSize="small" />
-                      {item}
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-            <div style={{ display: "flex" }}>
-              <div className={styles.buyBox}>
-                <div style={{ width: "14rem" }}>
-                  <button
-                    className={`${styles.sideBarButton} ${styles.btnAddToCart}`}
-                  >
-                    Add to cart
-                  </button>
-                </div>
-              </div>
-              <div className={styles.love}>
-                <div>
-                  <button
-                    className={`${styles.sideBarButton} ${styles.btnBuyNow}`}
-                  >
-                    <FavoriteBorderIcon />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Popper>
+          </Link>
+        </Card>
       </div>
     </>
   );
