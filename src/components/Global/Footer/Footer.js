@@ -5,13 +5,11 @@ import LanguageIcon from "@mui/icons-material/Language";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer style={{ marginTop: "3rem" }}>
       <div className={styles.FooterSection}>
         <div className={styles.TextFooter}>
-          <span>
-            Top companies choose Udemy Business to build in-demand career
-            skills.
-          </span>
+          Top companies choose <span>Udemy Business </span>
+          to build in-demand career skills.
         </div>
         <div className={styles.LogoFooter}>
           <img
@@ -119,7 +117,17 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div></div>
+        <div className={styles.CopyRight}>
+          <div className={styles.LogoContainer}>
+            <Link className={styles.CopyRightLogo}>
+              <img
+                src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
+                alt="logo"
+              />
+            </Link>
+          </div>
+          <div>© 2022 Udemy, Inc.</div>
+        </div>
       </div>
     </footer>
   );

@@ -10,9 +10,17 @@ import { Box, Popper, Stack } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
-const CourseCard = ({ id, image, title, author, rating, price, people }) => {
+const CourseCard = ({
+  id,
+  image,
+  title,
+  author,
+  rating,
+  price,
+  people,
+  syllabus,
+}) => {
   const [isShown, setIsShown] = useState(null);
-
   const onHoverHandler = (event) => {
     console.log(event.currentTarget);
     setIsShown(event.currentTarget);
@@ -95,20 +103,17 @@ const CourseCard = ({ id, image, title, author, rating, price, people }) => {
               hours
             </p>
             <ul className={styles.BoxList}>
-              <li>
-                <div className="List-Block">
-                  <CheckIcon fontSize="small" />
-                  hi
-                </div>
-                <div className="List-Block">
-                  <CheckIcon fontSize="small" />
-                  hi
-                </div>
-                <div className="List-Block">
-                  <CheckIcon fontSize="small" />
-                  hi
-                </div>
-              </li>
+              {syllabus?.map((item, index) => {
+                if (index > 2) return null;
+                return (
+                  <li key={index}>
+                    <div className="List-Block">
+                      <CheckIcon fontSize="small" />
+                      {item}
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
             <div style={{ display: "flex" }}>
               <div className={styles.buyBox}>

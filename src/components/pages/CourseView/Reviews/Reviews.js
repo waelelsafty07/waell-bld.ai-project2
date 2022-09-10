@@ -66,14 +66,14 @@ const Reviews = () => {
                 <ListItemText
                   primary={
                     <Link
-                      style={{ cursor: "pointer" }}
+                      style={{ cursor: "pointer", float: "right" }}
                       aria-label="thumbdown"
                       color="#000"
                       aria-describedby={id}
                       type="button"
                       onClick={handleClick}
                     >
-                      <MoreVertIcon style={{ float: "right" }} />
+                      <MoreVertIcon />
                     </Link>
                   }
                   secondary={

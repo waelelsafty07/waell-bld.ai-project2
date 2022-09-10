@@ -7,6 +7,7 @@ import { Container } from "@mui/material";
 import Courses from "../../Home/Courses/Courses";
 import { CoursesContext } from "../../../contexts/coursesData/coursesContext";
 import { initState, reducerCourses } from "../../../hooks/FetchCourse";
+import CoursesHeading from "../Courses/CoursesHeading";
 
 export default function LabTabs({ children, name }) {
   const data = useContext(CoursesContext);
@@ -28,7 +29,11 @@ export default function LabTabs({ children, name }) {
         {data.data.CoursesData.map((item, index) => {
           return (
             <TabPanel key={index} value={index.toString()} sx={{ p: 0 }}>
-              <Courses courses={item.courses} />
+              <Courses
+                courses={item.courses}
+                title={item.title}
+                description={item.description}
+              />
             </TabPanel>
           );
         })}

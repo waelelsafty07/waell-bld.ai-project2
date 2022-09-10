@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Container from "@mui/material/Container";
 import CourseCard from "./CourseCard/CourseCard";
 import Grid from "@mui/material/Grid";
 import CoursesHeading from "./CoursesHeading";
-import { Link, useSearchParams } from "react-router-dom";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { useSearchParams } from "react-router-dom";
+import { Navigation } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -22,17 +22,15 @@ const GridCourses = (course) => {
         rating={course.rating}
         price={course.price}
         people={course.people}
+        syllabus={course.syllabus}
       />
     </SwiperSlide>
   );
 };
 
-const Courses = ({ courses }) => {
+const Courses = ({ courses, title, description }) => {
   const [searchParams] = useSearchParams();
   const searchQuery = searchParams?.get(`search`);
-  const title = "Expand your career opportunities with Python";
-  const body =
-    "Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful language. Its simple syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. You’ll learn how to build everything from games to sites to apps. Choose from a range of courses that will appeal to both beginners and advanced developers alike.";
   const CourseDataFunc = () => {
     const coursesData = courses.map((course) => {
       if (
@@ -52,7 +50,7 @@ const Courses = ({ courses }) => {
         sx={{ pl: 0, pr: 0 }}
         maxWidth="xl"
       >
-        <CoursesHeading title={title} body={body} btn="Python" />
+        <CoursesHeading title={title} body={description} />
         <Grid container>
           <Swiper
             className={styles.swiperSlide}
