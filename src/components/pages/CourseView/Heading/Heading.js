@@ -22,6 +22,11 @@ const Heading = () => {
         </Container>
         <Container className={styles.Container}>
           <div className={styles.heading}>
+            <img
+              className={styles.CourseImage}
+              src={props?.dataCourse?.image}
+              alt={props?.dataCourse?.title}
+            />
             <Typography variant="h4" component="h1">
               {props?.dataCourse?.title}
             </Typography>
@@ -160,8 +165,8 @@ const Heading = () => {
               </div>
             </div>
           </div>
-          <SideBar data={props?.dataCourse} />
         </Container>
+        <SideBar data={props?.dataCourse} />
       </div>
       <div className={styles.fixedBottomBar}>
         <div className={styles.fixedBottomBarContainer}>

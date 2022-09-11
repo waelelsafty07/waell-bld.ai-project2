@@ -3,6 +3,10 @@
   color: #fff;
   padding: 2rem 0;
 }
+.CourseImage {
+  width: 100%;
+  display: none;
+}
 .Link {
   text-decoration: none;
 }
@@ -131,6 +135,9 @@
   }
 }
 @media only screen and (max-width: 1080px) {
+  .CourseImage {
+    display: block;
+  }
   .heading {
     max-width: 100%;
   }
