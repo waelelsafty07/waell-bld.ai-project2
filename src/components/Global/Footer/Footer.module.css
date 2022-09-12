@@ -1,0 +1,101 @@
+.FooterSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.2rem 0;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+  background: #1c1d1f;
+  border-top: 1px solid #3e4143;
+  color: #fff;
+}
+
+.FooterSection .TextFooter {
+  font-size: 1.2rem;
+  font-weight: 700;
+  min-width: 20rem;
+  flex: 1;
+  padding: 1.2rem 2.4rem 1.2rem 0;
+}
+.FooterSection .TextFooter span {
+  font-weight: bold;
+  color: #a435f0;
+}
+.FooterSection .LogoFooter img {
+  margin: 1.2rem 0;
+  max-width: 100%;
+  height: auto;
+  margin-right: 2.4rem;
+}
+.FooterMain .links {
+  display: flex;
+  width: 100%;
+}
+.FooterMain .links .LanguageButton {
+  padding: 0 0 2.4rem;
+  order: 1;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.FooterMain .links .LanguageButton Button {
+  justify-content: flex-start;
+  padding: 0 1.6rem;
+  min-width: 7rem;
+  height: 3rem;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  border-color: #fff;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+
+.LinkColumn {
+  flex-basis: 25.6rem;
+  margin-right: 1.6rem;
+  margin-bottom: 0;
+}
+.LinkColumn li {
+  margin: 0.4rem 0;
+}
+.LinkColumn li a {
+  justify-content: flex-start;
+  text-align: left;
+  width: 100%;
+  padding: 0.4rem 0;
+  cursor: pointer;
+}
+.LinkColumn li a:hover {
+  text-decoration: underline;
+}
+.CopyRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6.4rem 0 3.2rem;
+  width: 100%;
+}
+
+.LogoContainer {
+  display: flex;
+  align-items: center;
+  padding: 1.6rem 0;
+}
+.CopyRightLogo {
+  height: auto;
+  text-align: left;
+  vertical-align: baseline;
+  white-space: normal;
+}
+.CopyRightLogo img {
+  width: 91px;
+  height: 50;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}

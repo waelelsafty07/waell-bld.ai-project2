@@ -1,0 +1,9 @@
+.BreadcrumbsContainer {
+  font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+  .Breadcrumbs,
+  .BreadcrumbsContainer li:nth-child(2) {
+    display: none;
+  }
+}

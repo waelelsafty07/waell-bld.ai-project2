@@ -8,9 +8,7 @@ const CoursesHeading = ({ title, body, btn }) => {
       <div>
         <p className={styles.paragraph}>{body}</p>
       </div>
-      <button className={styles.btnCourses} sx={{ p: 10 }}>
-        Explore {btn}
-      </button>
+      <button className={styles.btnCourses}>Explore {btn}</button>
     </>
   );
 };

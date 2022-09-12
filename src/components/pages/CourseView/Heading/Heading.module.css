@@ -1,0 +1,169 @@
+.backGround {
+  background-color: #1c1d1f;
+  color: #fff;
+  padding: 2rem 0;
+}
+.CourseImage {
+  width: 100%;
+  display: none;
+}
+.Link {
+  text-decoration: none;
+}
+.colorWhite {
+  color: #fff;
+}
+.heading {
+  max-width: 44rem;
+}
+.heading h1 {
+  font-weight: 700;
+}
+.heading p {
+  font-size: 1.2rem;
+}
+
+.heading h1,
+.heading p {
+  margin: 1rem 0 0;
+}
+.Container {
+  position: relative;
+}
+.sizeStar {
+  font-size: 0.75rem;
+}
+
+.centerItem {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.IconHead {
+  margin: 0 0.3rem 0 1rem;
+}
+.fixedBottomBar {
+  display: none;
+  background-color: #1c1d1f;
+  color: #fff;
+  box-shadow: 0 -2px 4px rgb(0 0 0 / 8%), 0 -4px 12px rgb(0 0 0 / 16%);
+  padding: 1.6rem 2.4rem;
+  overflow-y: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  transform: translateY(0);
+  transition: transform 250ms cubic-bezier(0, 0, 0.38, 0.9);
+}
+.fixedBottomBar .fixedBottomBarContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.fixedBottomBar .fixedBottomBarContainer .titleContainer {
+  display: block;
+  margin-right: 1.6rem;
+  flex: 1;
+  min-width: 0;
+}
+.fixedBottomBar .fixedBottomBarContainer .titleContainer .title {
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  margin-bottom: 0.4rem;
+}
+.priceContainer {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+.priceContainer .price,
+.priceContainer .button {
+  flex: 0;
+}
+
+.priceContainer .price span {
+  margin-right: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.priceContainer .button button {
+  font-weight: 700;
+  width: 100%;
+  min-width: 6rem;
+  height: 3.4rem;
+  position: relative;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 0 1.2rem;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: bottom;
+}
+.HeadingFooter {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .fixedBottomBar .fixedBottomBarContainer .titleContainer {
+    display: none;
+  }
+  .priceContainer .button {
+    width: 100%;
+    flex: 1;
+  }
+  .priceContainer .button button {
+    background-color: #1c1d1f;
+    color: #fff;
+  }
+  .fixedBottomBar {
+    background-color: #fff;
+    padding: 0.3rem 0.5rem;
+  }
+  .priceContainer .price span {
+    color: #1c1d1f;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .CourseImage {
+    display: block;
+  }
+  .heading {
+    max-width: 100%;
+  }
+  .heading h1 {
+    font-size: 1.8rem !important;
+    margin: 1rem 0;
+  }
+  .Container {
+    max-width: 650px;
+    display: flex !important;
+    flex-direction: column-reverse;
+  }
+  .DisplayBlock {
+    display: block !important;
+  }
+  .centerItem {
+    align-items: center;
+    justify-content: start;
+  }
+  .IconHead {
+    margin: 0 0.5rem 0 0;
+  }
+  .fixedBottomBar {
+    display: block;
+  }
+  .HeadingFooter {
+    display: block;
+  }
+}
